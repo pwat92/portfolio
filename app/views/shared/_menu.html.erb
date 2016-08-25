@@ -1,0 +1,17 @@
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#menu").mmenu();
+   });
+</script>
+
+<div class="menu-bar">
+  <a href="#menu" class="hamburger"><%= image_tag("hamburger.png", :alt => "Menu") %></a>
+</div>
+
+<nav id="menu">
+  <ul>
+     <li class="Spacer"><%= link_to 'Home', root_path %></li>
+     <li><%= link_to 'About & Contact', about_and_contact_path %></li>
+     <li><a href="#">Portfolio</a></li>
+  </ul>
+</nav>

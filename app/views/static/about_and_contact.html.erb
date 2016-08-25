@@ -1,0 +1,48 @@
+<div class="dp-container">
+  <div class="display-picture">
+    <%= image_tag("PatrickWatson.jpg", :alt => "selfie") %>
+  </div>
+</div>
+<!--TODO: add social media links-->
+<div class="info-container">
+  <h2>Patrick Watson</h2>
+  <h4>Montreal, QC</h4>
+  <strong>Email: </strong><%= @email %><br />
+  <strong>Phone: </strong><%= @phone_number %>
+
+  <div class="social-media">
+    <h4>Follow me on social media!</h4>
+    <ul>
+      <li>
+        <%= image_tag("facebooklogo.png") %>
+      </li>
+      <li>
+        <%= image_tag("linkedinlogo.png") %>
+      </li>
+      <li>
+        <%= image_tag("instalogo.png") %>
+      </li>
+      <li>
+        <%= image_tag("snapchatlogo.png") %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="buttons">
+    <div class="button-container">
+      <a href="#" id="about-btn" class="btn">About</a>
+    </div>
+    <div class="button-container">
+      <a href="#" id="skills-btn" class="btn">Skills</a>
+    </div>
+    <div class="button-container">
+      <a href="#" id="services-btn" class="btn">Services</a>
+    </div>
+  </div>
+</div>
+
+<div class="blurb-container">
+  <p id="about-blurb">about</p>
+  <p id="skills-blurb">skills</p>
+  <p id="services-blurb">services</p>
+</div>

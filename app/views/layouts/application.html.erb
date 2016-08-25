@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patrick Watson</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Muli|Pinyon+Script" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="my-page">
+    <%= render "shared/menu" %>
+    <%= yield %>
+  </div>
+</body>
+</html>
