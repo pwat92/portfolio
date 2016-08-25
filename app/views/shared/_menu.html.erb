@@ -1,6 +1,6 @@
 <script type="text/javascript">
-   $(document).ready(function() {
-      $("#menu").mmenu();
+  $(document).ready(function() {
+    $("#menu").mmenu();
    });
 </script>
 
@@ -12,6 +12,6 @@
   <ul>
      <li class="Spacer"><%= link_to 'Home', root_path %></li>
      <li><%= link_to 'About & Contact', about_and_contact_path %></li>
-     <li><a href="#">Portfolio</a></li>
+     <li><%= link_to 'Portfolio', portfolio_path %></li>
   </ul>
 </nav>
