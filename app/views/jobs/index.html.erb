@@ -1,10 +1,11 @@
+<h1 class="portfolio-header">Portfolio</h1>
 <ul id="hexGrid">
   <% @jobs.each do |job| %>
   <li class="hex">
     <a class="hexIn" href="#">
-      <%= image_tag("PatrickWatson.jpg", :alt => "selfie") %>
+      <%= image_tag(job.screenshot, :alt => "selfie") %>
       <h1><%= job.client %></h1>
-      <p><%= job.description %></p>
+      <p><%= job.type_of_work %></p>
     </a>
   </li>
   <% end %>

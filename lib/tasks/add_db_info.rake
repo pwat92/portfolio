@@ -1,0 +1,147 @@
+namespace :add_db_info do
+  desc "generates all jobs in db"
+    task add_previous_jobs: :environment do
+      Job.destroy_all
+
+      tic = Job.new do |j|
+        j.client =  "Transport Inner Circle"
+        j.description = "A freight transport company based out of Montreal. They were looking to up their online presence so I designed and built them this entire web app"
+        j.url = "http://www.transportinnercircle.ca/"
+        j.repository = "https://github.com/pwat92/transportinnercircle"
+        j.screenshot = "TransportInnerCircleScreen.png"
+        j.type_of_work = "Design & Rails Application"
+      end
+
+      notoriety = Job.new do |j|
+        j.client =  "Noteoriety"
+        j.description = "A note sharing app for students, allows for easy sharing of notes and class work. I built the entire backend and API and also designed all of the data structures."
+        j.url = "http://www.noteoriety.com/"
+        j.repository = ""
+        j.screenshot = "rawcode.jpeg"
+        j.type_of_work = "Rails API & Data structure Design"
+      end
+
+      ttc = Job.new do |j|
+        j.client =  "Travelling Tea Club"
+        j.description = "The travelling tea club is a company that I started. It is a monthly tea club which allows people to try new tea every month!. I designed and built the entire store, using a shopify theme and writing some code myself to get it just how I liked it"
+        j.url = "https://travellingteaclub.com/"
+        j.repository = ""
+        j.screenshot = "TravellingTeaClubScreen.png"
+        j.type_of_work = "Design & Shopify Store"
+      end
+
+      stb = Job.new do |j|
+        j.client =  "Sharethebus"
+        j.description = "A Montreal based start up that is revolutionizing the way large groups of people travel! I worked mostly on the backend of their rails and mobile apps, incredible learning and incredible people!"
+        j.url = "https://www.sharethebus.com/"
+        j.repository = ""
+        j.screenshot = "rawcode.jpeg"
+        j.type_of_work = "Rails Application & a little AngularJS"
+      end
+
+      pdm = Job.new do |j|
+        j.client =  "Pro Deco Montreal"
+        j.description = "A Montreal based paint contracting company. I designed the logo, business cards and website for Pro Deco Montreal!"
+        j.url = "http://prodecomontreal.ca/"
+        j.repository = ""
+        j.screenshot = "ProDecoLogo.png"
+        j.type_of_work = "Design & Wordpress develpment"
+      end
+
+      pwp = Job.new do |j|
+        j.client =  "This Website!"
+        j.description = "The site you're on right now! I needed a way to display all of my previous and future work! so I designed and coded this rails application to do just that!"
+        j.url = ""
+        j.repository = "https://github.com/pwat92/portfolio"
+        j.screenshot = "PortfolioSiteScreen.png"
+        j.type_of_work = "Design & Rails Application"
+      end
+
+      tic.save
+      stb.save
+      ttc.save
+      notoriety.save
+      pdm.save
+      pwp.save
+      puts "total jobs in db: #{Job.count}"
+      puts "done"
+    end
+
+  desc "generates skills in db"
+    task add_previous_skills: :environment do
+      Skill.destroy_all
+
+      ruby = Skill.new do |s|
+        s.name = "Ruby"
+        s.picture = "rubylogo.png"
+        s.level = 90
+      end
+
+      rails = Skill.new do |s|
+        s.name = "Ruby on Rails"
+        s.picture = "railslogo.png"
+        s.level = 90
+      end
+
+      javascript = Skill.new do |s|
+        s.name = "Javascript"
+        s.picture = "javascriptlogo.png"
+        s.level = 50
+      end
+
+      wordpress = Skill.new do |s|
+        s.name = "Wordpress"
+        s.picture = "wordpresslogo.png"
+        s.level = 70
+      end
+
+      shopify = Skill.new do |s|
+        s.name = "Shopify"
+        s.picture = "shopifylogo.png"
+        s.level = 70
+      end
+
+      photoshop = Skill.new do |s|
+        s.name = "Photoshop"
+        s.picture = "photoshoplogo.png"
+        s.level = 65
+      end
+
+      sketch = Skill.new do |s|
+        s.name = "Sketch"
+        s.picture = "sketchlogo.png"
+        s.level = 65
+      end
+
+      angular = Skill.new do |s|
+        s.name = "AngularJS"
+        s.picture = "angularlogo.png"
+        s.level = 40
+      end
+
+      jquery = Skill.new do |s|
+        s.name = "JQuery"
+        s.picture = "jquerylogo.png"
+        s.level = 40
+      end
+
+      git = Skill.new do |s|
+        s.name = "Git"
+        s.picture = "gitlogo.png"
+        s.level = 90
+      end
+
+
+      ruby.save
+      rails.save
+      javascript.save
+      wordpress.save
+      shopify.save
+      photoshop.save
+      sketch.save
+      angular.save
+      jquery.save
+      git.save
+    end
+
+end
