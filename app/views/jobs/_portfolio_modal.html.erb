@@ -1,0 +1,31 @@
+<div class="modal fade" id="portfolioModal<%= i %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= job.client %></h4>
+      </div>
+      <div class="modal-body">
+        <h2>Description</h2>
+        <p><%= job.description %></p>
+
+        <h2>Skills</h2>
+          <p>
+
+            <div class="skill-tile-container">
+              <%= render partial: "shared/skill_grid", :locals => {:skills => job.skills, :progress => false, :skills_per_row => 4, :index => 0} %>
+            </div>
+
+          </p>
+
+        <h2>Testimonials</h2>
+        <p><%= job.testimonials %></p>
+      </div>
+      <div class="modal-footer">
+        <h2>links</h2>
+        <%= link_to "website", job.url, :class => "", :target => "_blank" %>
+        <%= link_to "repository", job.repository, :class => "", :target => "_blank" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@ class StaticController < ApplicationController
     @snapchat_link = "https://www.snapchat.com/add/pwat92"
     @instagram_link = ""
     @facebook_link = ""
-    @linkedin_link = ""
+    @linkedin_link = "https://ca.linkedin.com/in/patrick-watson"
 
     #skill variables
     @skills_per_row = 4

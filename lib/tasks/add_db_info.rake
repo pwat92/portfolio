@@ -3,6 +3,8 @@ namespace :add_db_info do
     task add_previous_jobs: :environment do
       Job.destroy_all
 
+      skills_used = Skill.all
+
       tic = Job.new do |j|
         j.client =  "Transport Inner Circle"
         j.description = "A freight transport company based out of Montreal. They were looking to up their online presence so I designed and built them this entire web app"
@@ -10,6 +12,7 @@ namespace :add_db_info do
         j.repository = "https://github.com/pwat92/transportinnercircle"
         j.screenshot = "TransportInnerCircleScreen.png"
         j.type_of_work = "Design & Rails Application"
+        j.skills = [skills_used[0], skills_used[1], skills_used[9], skills_used[10], skills_used[11]]
       end
 
       notoriety = Job.new do |j|
@@ -19,6 +22,7 @@ namespace :add_db_info do
         j.repository = ""
         j.screenshot = "rawcode.jpeg"
         j.type_of_work = "Rails API & Data structure Design"
+        j.skills = [skills_used[0], skills_used[1]]
       end
 
       ttc = Job.new do |j|
@@ -28,6 +32,7 @@ namespace :add_db_info do
         j.repository = ""
         j.screenshot = "TravellingTeaClubScreen.png"
         j.type_of_work = "Design & Shopify Store"
+        j.skills = [skills_used[4], skills_used[5], skills_used[6], skills_used[10], skills_used[11]]
       end
 
       stb = Job.new do |j|
@@ -37,6 +42,7 @@ namespace :add_db_info do
         j.repository = ""
         j.screenshot = "rawcode.jpeg"
         j.type_of_work = "Rails Application & a little AngularJS"
+        j.skills = [skills_used[0], skills_used[1], skills_used[2], skills_used[7], skills_used[9], skills_used[10], skills_used[11]]
       end
 
       pdm = Job.new do |j|
@@ -46,6 +52,7 @@ namespace :add_db_info do
         j.repository = ""
         j.screenshot = "ProDecoLogo.png"
         j.type_of_work = "Design & Wordpress develpment"
+        j.skills = [skills_used[3], skills_used[5], skills_used[6], skills_used[10], skills_used[11]]
       end
 
       pwp = Job.new do |j|
@@ -55,6 +62,7 @@ namespace :add_db_info do
         j.repository = "https://github.com/pwat92/portfolio"
         j.screenshot = "PortfolioSiteScreen.png"
         j.type_of_work = "Design & Rails Application"
+        j.skills = [skills_used[0], skills_used[1], skills_used[2], skills_used[5], skills_used[6], skills_used[8], skills_used[9], skills_used[10], skills_used[11]]
       end
 
       tic.save
@@ -131,17 +139,30 @@ namespace :add_db_info do
         s.level = 90
       end
 
+      css = Skill.new do |s|
+        s.name = "CSS"
+        s.picture = "csslogo.png"
+        s.level = 65
+      end
 
-      ruby.save
-      rails.save
-      javascript.save
-      wordpress.save
-      shopify.save
-      photoshop.save
-      sketch.save
-      angular.save
-      jquery.save
-      git.save
+      html = Skill.new do |s|
+        s.name = "HTML"
+        s.picture = "htmllogo.png"
+        s.level = 90
+      end
+
+      ruby.save #0
+      rails.save #1
+      javascript.save #2
+      wordpress.save #3
+      shopify.save #4
+      photoshop.save #5
+      sketch.save #6
+      angular.save #7
+      jquery.save #8
+      git.save #9
+      css.save #10
+      html.save #11
     end
 
 end

@@ -50,33 +50,34 @@
   </div>
 
   <div id="skills-blurb" class="blurb">
-    <h3>Skills</h3>
-    <div class="container-fluid">
-
-      <% (1..@number_of_rows).each do |n| %>
-        <div class="row">
-          <% (1..@skills_per_row).each do |i| %>
-            <% unless @skills[@index] == nil %>
-              <div class="col-md-3">
-                <div class="skill-container">
-                  <div class="img-container">
-                    <%= image_tag(@skills[@index].picture) %>
-                  </div>
-                  <p class="skill-name"><%= @skills[@index].name%></p>
-                  <p>Skill Level:</p>
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= "#{@skills[@index].level}" + "%"%> ">
-                      <span class="sr-only"></span>
+      <h3>Skills</h3>
+      <!-- <div class="container-fluid"> -->
+        <div class="skill-tile-container">
+        <% (1..@number_of_rows).each do |n| %>
+          <div class="row">
+            <% (1..@skills_per_row).each do |i| %>
+              <% unless @skills[@index] == nil %>
+                <div class="col-md-3">
+                  <div class="skill-container">
+                    <div class="img-container">
+                      <%= image_tag(@skills[@index].picture) %>
+                    </div>
+                    <p class="skill-name"><%= @skills[@index].name%></p>
+                    <p>Skill Level:</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: <%= "#{@skills[@index].level}" + "%"%> ">
+                        <span class="sr-only"></span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <% @index += 1 %>
+                <% @index += 1 %>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+          </div>
+        <% end %>
+      </div>
+    <!-- </div> -->
   </div>
 
   <div id="services-blurb" class="blurb">
