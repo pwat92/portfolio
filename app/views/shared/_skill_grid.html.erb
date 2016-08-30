@@ -1,0 +1,19 @@
+<!-- vars to be passed
+  progress: bool
+  skills: array
+  skills_per_row: int -->
+
+<% number_of_rows = (skills.count.to_f/skills_per_row.to_f).ceil %>
+
+  <div class="container-fluid">
+    <% (1..number_of_rows).each do |n| %>
+      <div class="row">
+        <% (1..skills_per_row).each do |i| %>
+          <div class="col-md-3">
+            <%= render partial: "shared/skill_tile", :locals => {:skill => skills[index], :progress => progress} %>
+          </div>
+          <% index += 1 %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

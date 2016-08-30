@@ -9,12 +9,12 @@ class StaticController < ApplicationController
     @snapchat_link = "https://www.snapchat.com/add/pwat92"
     @instagram_link = ""
     @facebook_link = ""
-    @linkedin_link = ""
+    @linkedin_link = "https://ca.linkedin.com/in/patrick-watson"
 
     #skill variables
-    @skills_per_row = 4
+    #@skills_per_row = 4
     @skills = Skill.all
-    @number_of_rows = (@skills.count.to_f / @skills_per_row.to_f).ceil
-    @index = 0
+    #@number_of_rows = (@skills.count.to_f / @skills_per_row.to_f).ceil
+    #@index = 0
   end
 end

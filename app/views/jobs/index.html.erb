@@ -1,8 +1,8 @@
 <h1 class="portfolio-header">Portfolio</h1>
 <ul id="hexGrid">
-  <% @jobs.each do |job| %>
+  <% @jobs.each_with_index do |job, i| %>
   <li class="hex">
-    <a class="hexIn" href="#">
+    <a class="hexIn" href="#" data-toggle="modal" data-target="#portfolioModal<%= "#{i}" %> ">
       <%= image_tag(job.screenshot, :alt => "selfie") %>
       <h1><%= job.client %></h1>
       <p><%= job.type_of_work %></p>
@@ -10,3 +10,7 @@
   </li>
   <% end %>
 </ul>
+
+<% @jobs.each_with_index do |job, i| %>
+  <%= render partial: "portfolio_modal", :locals => {:job => job, :i => i} %>
+<% end %>
