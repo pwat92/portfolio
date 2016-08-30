@@ -11,11 +11,7 @@
 
         <h2>Skills</h2>
           <p>
-
-            <div class="skill-tile-container">
-              <%= render partial: "shared/skill_grid", :locals => {:skills => job.skills, :progress => false, :skills_per_row => 4, :index => 0} %>
-            </div>
-
+            <%= render partial: "shared/skill_grid", :locals => {:skills => job.skills, :progress => false, :skills_per_row => 4, :index => 0} %>
           </p>
 
         <h2>Testimonials</h2>
