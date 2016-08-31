@@ -13,6 +13,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery.matchHeight
 //= require_tree .
 //= require bootstrap-sprockets
 //= require jquery.mmenu
