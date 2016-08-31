@@ -168,4 +168,19 @@ namespace :add_db_info do
       puts "done"
     end
 
+  desc "generates testimonials in db"
+    task add_previous_testimonials: :environment do
+      Testimonial.destroy_all
+      @jobs = Job.all
+
+      martin = Testimonial.create do |t|
+        t.testimonial = "Patrick is an energetic person who loves to be involved in every aspect of the company. He loves to make the work place more enjoyable by organizing social activities for his coworkers. As a developer, he is eager to learn new technologies and concepts. He works hard to learn and solve issues."
+        t.job = @jobs[1]
+        t.giver = "Martin Provencher"
+        t.position = "CTO"
+      end
+
+      puts "total testimonials in db #{Testimonial.count}"
+      puts "done"
+    end
 end

@@ -7,5 +7,6 @@ namespace :setup do
 
     Rake::Task['add_db_info:add_previous_skills'].execute
     Rake::Task['add_db_info:add_previous_jobs'].execute
+    Rake::Task['add_db_info:add_previous_testimonials'].execute
   end
 end
