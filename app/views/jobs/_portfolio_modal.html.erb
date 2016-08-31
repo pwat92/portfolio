@@ -15,12 +15,7 @@
         </p>
 
         <% if job.testimonials.count > 0 %>
-          <h2>Testimonials</h2>
-          <p>
-            <% job.testimonials.each do |t| %>
-              <p><%= t.testimonial %>
-            <% end %>
-          </p>
+          <%= render partial: "testimonial_display", :locals => {:job => job} %>
         <% end %>
       </div>
       <div class="modal-footer">

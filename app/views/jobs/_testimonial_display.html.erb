@@ -1,0 +1,7 @@
+<h2>Testimonials</h2>
+  <p>
+    <% job.testimonials.each do |t| %>
+      <p><%= t.testimonial %></p>
+      <p class="author"><%= t.author %></p>
+    <% end %>
+  </p>
