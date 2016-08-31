@@ -163,6 +163,9 @@ namespace :add_db_info do
       git.save #9
       css.save #10
       html.save #11
+
+      puts "total skills in db: #{Skill.count}"
+      puts "done"
     end
 
 end
