@@ -20,7 +20,7 @@ namespace :add_db_info do
         j.description = "A note sharing app for students, allows for easy sharing of notes and class work. I built the entire backend and API and also designed all of the data structures."
         j.url = "http://www.noteoriety.com/"
         j.repository = nil
-        j.screenshot = "rawcode.jpeg"
+        j.screenshot = "rawcode.png"
         j.type_of_work = "Rails API & Data structure Design"
         j.skills = [skills_used[0], skills_used[1]]
       end
@@ -40,7 +40,7 @@ namespace :add_db_info do
         j.description = "A Montreal based start up that is revolutionizing the way large groups of people travel! I worked mostly on the backend of their rails and mobile apps, incredible learning and incredible people!"
         j.url = "https://www.sharethebus.com/"
         j.repository = nil
-        j.screenshot = "rawcode.jpeg"
+        j.screenshot = "rawcode.png"
         j.type_of_work = "Rails Application & a little AngularJS"
         j.skills = [skills_used[0], skills_used[1], skills_used[2], skills_used[7], skills_used[9], skills_used[10], skills_used[11]]
       end
