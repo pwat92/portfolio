@@ -19,7 +19,7 @@ namespace :add_db_info do
         j.client =  "Noteoriety"
         j.description = "A note sharing app for students, allows for easy sharing of notes and class work. I built the entire backend and API and also designed all of the data structures."
         j.url = "http://www.noteoriety.com/"
-        j.repository = ""
+        j.repository = nil
         j.screenshot = "rawcode.jpeg"
         j.type_of_work = "Rails API & Data structure Design"
         j.skills = [skills_used[0], skills_used[1]]
@@ -29,7 +29,7 @@ namespace :add_db_info do
         j.client =  "Travelling Tea Club"
         j.description = "The travelling tea club is a company that I started. It is a monthly tea club which allows people to try new tea every month!. I designed and built the entire store, using a shopify theme and writing some code myself to get it just how I liked it"
         j.url = "https://travellingteaclub.com/"
-        j.repository = ""
+        j.repository = nil
         j.screenshot = "TravellingTeaClubScreen.png"
         j.type_of_work = "Design & Shopify Store"
         j.skills = [skills_used[4], skills_used[5], skills_used[6], skills_used[10], skills_used[11]]
@@ -39,7 +39,7 @@ namespace :add_db_info do
         j.client =  "Sharethebus"
         j.description = "A Montreal based start up that is revolutionizing the way large groups of people travel! I worked mostly on the backend of their rails and mobile apps, incredible learning and incredible people!"
         j.url = "https://www.sharethebus.com/"
-        j.repository = ""
+        j.repository = nil
         j.screenshot = "rawcode.jpeg"
         j.type_of_work = "Rails Application & a little AngularJS"
         j.skills = [skills_used[0], skills_used[1], skills_used[2], skills_used[7], skills_used[9], skills_used[10], skills_used[11]]
@@ -49,7 +49,7 @@ namespace :add_db_info do
         j.client =  "Pro Deco Montreal"
         j.description = "A Montreal based paint contracting company. I designed the logo, business cards and website for Pro Deco Montreal!"
         j.url = "http://prodecomontreal.ca/"
-        j.repository = ""
+        j.repository = nil
         j.screenshot = "ProDecoLogo.png"
         j.type_of_work = "Design & Wordpress develpment"
         j.skills = [skills_used[3], skills_used[5], skills_used[6], skills_used[10], skills_used[11]]
@@ -58,7 +58,7 @@ namespace :add_db_info do
       pwp = Job.new do |j|
         j.client =  "This Website!"
         j.description = "The site you're on right now! I needed a way to display all of my previous and future work! so I designed and coded this rails application to do just that!"
-        j.url = ""
+        j.url = nil
         j.repository = "https://github.com/pwat92/portfolio"
         j.screenshot = "PortfolioSiteScreen.png"
         j.type_of_work = "Design & Rails Application"

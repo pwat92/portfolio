@@ -18,11 +18,20 @@
           <%= render partial: "testimonial_display", :locals => {:job => job} %>
         <% end %>
       </div>
-      <div class="modal-footer">
-        <h2>links</h2>
-        <%= link_to "website", job.url, :class => "", :target => "_blank" %>
-        <%= link_to "repository", job.repository, :class => "", :target => "_blank" %>
-      </div>
+      <%unless job.url.nil? && job.repository.nil? %>
+        <div class="modal-footer">
+          <h2>links</h2>
+
+          <%unless job.url.nil? %>
+            <%= link_to "website", job.url, :class => "", :target => "_blank" %>
+          <% end %>
+
+          <%unless job.repository.nil? %>
+            <%= link_to "repository", job.repository, :class => "", :target => "_blank" %>
+          <% end %>
+
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
