@@ -10,12 +10,18 @@
         <p><%= job.description %></p>
 
         <h2>Skills</h2>
-          <p>
-            <%= render partial: "shared/skill_grid", :locals => {:skills => job.skills, :progress => false, :skills_per_row => 4, :index => 0} %>
-          </p>
+        <p>
+          <%= render partial: "shared/skill_grid", :locals => {:skills => job.skills, :progress => false, :skills_per_row => 4, :index => 0} %>
+        </p>
 
-        <h2>Testimonials</h2>
-        <p><%= job.testimonials %></p>
+        <% if job.testimonials.count > 0 %>
+          <h2>Testimonials</h2>
+          <p>
+            <% job.testimonials.each do |t| %>
+              <p><%= t.testimonial %>
+            <% end %>
+          </p>
+        <% end %>
       </div>
       <div class="modal-footer">
         <h2>links</h2>

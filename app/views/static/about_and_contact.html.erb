@@ -16,16 +16,16 @@
     <h4>Follow me on social media!</h4>
     <ul>
       <li>
-        <%= image_tag("facebooklogo.png") %>
+        <%= link_to image_tag("facebooklogo.png"), @facebook_link, :target => "blank" %>
       </li>
       <li>
-        <%= image_tag("linkedinlogo.png") %>
+        <%= link_to image_tag("linkedinlogo.png"), @linkedin_link, :target => "blank" %>
       </li>
-      <li>
+<!--       <li>
         <%= image_tag("instalogo.png") %>
-      </li>
+      </li> -->
       <li>
-        <a href=<%= @snapchat %>><%= image_tag("snapchatlogo.png") %>
+        <%= link_to image_tag("snapchatlogo.png"), @snapchat_link, :target => "blank" %>
       </li>
     </ul>
   </div>
@@ -46,7 +46,7 @@
 <div class="blurb-container">
   <div id="about-blurb" class="blurb">
     <h3>About Me</h3>
-    <p>Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum, libero vitae sagittis aliquet, ipsum nisi blandit velit, aliquet ultricies dolor quam ac urna. Praesent lacinia, mauris ultricies blandit porttitor, lacus dolor fringilla mauris, id bibendum turpis ipsum a lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam fringilla neque porta quam interdum, a vehicula ipsum venenatis. Proin dui quam, iaculis malesuada ante nec, porta ultrices felis. Proin sodales diam vel justo vulputate convallis. Etiam id nunc ut mauris porta accumsan in sed quam. Nullam egestas sed ipsum sed egestas. Vivamus facilisis finibus enim, eget condimentum ipsum sagittis in. Donec tristique luctus ex, sed euismod nibh mattis vel. Proin maximus a nisi vitae tempor. Mauris egestas magna felis, in sagittis massa maximus vitae. Fusce nulla orci, egestas dictum vehicula vel, auctor vitae nibh. Phasellus faucibus at ligula non efficitur.</p>
+    <p><%= @about_me_blurb %></p>
   </div>
 
   <div id="skills-blurb" class="blurb">
@@ -68,6 +68,7 @@
         <li>Building a personal website like this one</li>
         <li>Building a website to showcase your business</li>
         <li>Front end web development</li>
+        <li>Technology consulting</li>
         <li>Wordpress development</li>
         <li>Shopify store development</li>
         <li>Landing page development</li>
