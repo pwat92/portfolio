@@ -12,19 +12,7 @@
  *
  *= require jquery.mmenu
  *= require_tree .
- *= require_self
+ *= require_self 
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-html{
-  height: 100%;
-}
-#my-page{
-  height: 100%;
-}
-body{
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Muli', sans-serif;
-}
