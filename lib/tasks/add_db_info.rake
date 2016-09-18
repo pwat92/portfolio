@@ -8,7 +8,7 @@ namespace :add_db_info do
       tic = Job.new do |j|
         j.client =  "Transport Inner Circle"
         j.description = "A freight transport company based out of Montreal. They were looking to up their online presence so I designed and built them this entire web app"
-        j.url = "http://www.transportinnercircle.herokuapp.com/"
+        j.url = "http://transportinnercircle.herokuapp.com/"
         j.repository = "https://github.com/pwat92/transportinnercircle"
         j.screenshot = "TransportInnerCircleScreen.png"
         j.type_of_work = "Design & Rails Application"
